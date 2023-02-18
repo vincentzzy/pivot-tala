@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<html lang="en">
+<style>
+    body {
+        font-family: 'Montserrat', 'Chakra Petch', Arial, sans-serif;
+        font-size: 18px;
+    }
+    #nxt-button {
+        border-bottom: none;
+    }
+    @media screen and (max-width:800px) {
+        body {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<head> <!--digdi ko na ikaag su navbar and anything not needed-->
+    <title>English Fundamentals | Project TALA</title>
+
+    <ul class="navbar" name="navigation">
+        <li class="navcontent"><a href="https://sourceforge.net/projects/project-tala/">Source</a></li>
+        <li class="navcontent"><a href="../../about_us.html">About Us</a></li>
+        <li class="navcontent-r"><a href="../../index.html">Home</a></li>
+    </ul>
+</head>
+
+<header> 
+
+</header>
+
+<!-- This is the part that contains the lesson components :DD -->
+<main>
+
+    <div class="lesson-content">
+        <div id="lesson-title">
+            <h2>English Fundamentals</h2><hr>
+        </div>
+        
+
+        <div class="lesson-body">
+            <p>
+                Welcome to English Learning with TALA.
+                <br>This course has the Common Core Standards for Grade 7-10 English
+            </p>
+            <p>
+                This course will assist you in learning; reading, writing, speaking, listening and language
+                <br> in an effort to help students improve in English and to fluently read and write to all subject areas.
+            </p>
+            <p>
+                We will cover a range of topics, from grammar and vocabulary building,
+                <br>reading comprehension  and creative writing. We will also delve into the study of literature,
+                <br> where you will have the opportunity to analyse and appreciate various works of fiction and nonfiction.
+            </p>
+            <p>
+                Throughout the course, you will be given opportunities to practise and apply what you have learned
+                <br>through writing assignments, group discussions and writing assignments, group discussion, and presentations.
+                <br>Our goal is to help you become confident and competent English speakers and writers,
+                <br>who can communicate effectively in a variety of settings.
+            </p>
+            <p>
+                So, are you ready to start your journey to become a better English speaker and write ?
+                Let’s get started!
+            </p>
+            <a href="lesson_1_eng.html" id="nxt-button"><button>Next lesson</button></a>
+            <button id="backButton">Go back</button>
+        </div>
+        <div id="author">
+            <hr /><h5>By: Jelaine Raven Cabadato, English Educator
+                <br>Francis Glenn Paglinawan, English Educator
+            </h5>
+        </div>
+    </div>
+
+        <script>
+  const backButton = document.querySelector('#backButton');
+  backButton.addEventListener('click', () => {
+    history.back();
+  });
+        </script>
+</main>
+
+<footer class="license">
+    <br /><hr /><br />
+    Project Tala Prototype Version 2023.001<br /><br />
+    Project TALA is under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNL AGPL v3 License</a>. Made with ❤️ by Team Pivot, 2023
+</footer>
+
+</html>

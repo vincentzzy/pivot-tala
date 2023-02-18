@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+<html lang="en">
+<style>
+    body {
+        font-family: 'Montserrat', 'Chakra Petch', Arial, sans-serif;
+        font-size: 18px;
+        padding: 0 15% 0 15%;
+        background: #3B3B3B;
+        color: #FFFBEF;
+        text-align: center;
+    }
+    .navcontent a, .navcontent-r a {
+        padding: 20px 20px;
+    }
+    button {
+        border-color: #FFFBEF;
+        background: none;
+        color: #FFFBEF;
+        padding: 20px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-family: 'Chakra Petch', Arial, sans-serif;
+    }
+    button:hover {
+        background: #534439;
+    }
+    @media screen and (max-width:800px) {
+        body {
+            font-size: 16px;
+            padding: 0 10% 0 10%;
+        }
+        .navcontent a, .navcontent-r a {
+        padding: 30px 10px 30px 10px;
+        }
+        #putanginangdropdownto {
+            display: none;
+        }
+    }
+    .next-button {
+        border-bottom: none;
+        float: right;
+    }
+    #backButton {
+        float: left;
+    }
+    .lesson-body {
+        text-align: left;
+    }
+    @media screen and (min-width:800px){
+    .dropdown-1, .dropdown-2, .dropdown-3 {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content-1, .dropdown-content-2, .dropdown-content-3 {
+        display: none;
+        position: absolute;
+        background-color: rgb(28, 29, 30);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+    .dropdown-1:hover .dropdown-content-1, .dropdown-2:hover .dropdown-content-2, .dropdown-3:hover .dropdown-content-3 {
+        display:block;
+    }
+    #hindi-dropdown {
+        display: none;
+    }
+}
+</style>
+
+<head> <!--digdi ko na ikaag su navbar and anything not needed-->
+    <title>Science Fundamentals | Project TALA</title>
+
+    <ul class="navbar" name="navigation">
+        <li class="navcontent"><a href="/login/login.html">Login</a></li>
+        <li class="navcontent-r"><a href="#">Home</a></li>
+        <li class="navcontent"><a href="/index.html">Landing</a></li>
+    </ul>
+</head>
+
+<header> 
+
+</header>
+
+<!-- This is the part that contains the lesson components :DD -->
+<main>
+
+    <div class="lesson-content">
+        <div id="lesson-title">
+            <h2> Science Fundamentals </h2><hr>
+        </div>
+
+        <div class="lesson-body">
+            <p>
+                <br>
+                Welcome to the World of Scientific Learning with TALA.  
+                <br> <br>
+                Science, what is Science? Who does  it? How do they do it? Is Science important?
+                <br> </br>
+                Well, Science is part of our lives, it refers to the systematic study of the structure and behavior of the physical and the natural world throurgh the observation, experimentation, and the testing of the theories presented against the evidence obtained.</br> 
+                <br> 
+                There are Three Main Branches of Science which are the following:<div id="putanginangdropdownto">
+                <h6>Hover over the 3 branches of science to learn more :></h6>
+                <div class="dropdown-1">
+                    <span> Physical Science </span>
+                    <div class="dropdown-content-1">
+                        <span> the sciences concerned with the study of inanimate natural objects, including physics, chemistry, astronomy, and related subjects. </span>
+                    </div>
+                </div>,
+
+                <div class="dropdown-2">
+                    <span> Life Science </span>
+                    <div class="dropdown-content-2">
+                        <span> the branch of science which studies the every living thing on earth. </span>
+                    </div>
+                </div>
+                and
+                <div class="dropdown-3">
+                    <span> Earth Science </span>
+                    <div class="dropdown-content-3">
+                        <span> the fields of study concerned with the solid Earth, its waters, and the air that envelops it. They include the geologic, hydrologic, and atmospheric sciences with the broad aim of understanding Earth's present features and past evolution and using this knowledge to benefit humankind.</span>
+                    </div>
+                </div>.</div>
+                <div id="hindi-dropdown">
+                <p><strong>Physical Science</strong><br>
+                    <span>The sciences concerned with the study of inanimate natural objects, including physics, chemistry, astronomy, and related subjects. </span>
+                </p>
+                <p><strong>Life Science</strong>
+<br><span>The branch of science which studies the every living thing on earth. </span>
+                </p>
+                <p><strong>Earth Science</strong><br>
+                    <span>The sciences concerned with the study of inanimate natural objects, including physics, chemistry, astronomy, and related subjects. </span>
+                </p></div>
+                <br> Each of these Main branches contains subgroups which we are about to take a look. And before we go in those topics we will first learn about it's basics or fundamentals for better scientific learning.
+                <br>
+            </p>
+
+            <p>Now let's move on to know more.</p>
+
+            <a href="lesson_1.html" class="next-button"><button>Next section</button></a><br><br>
+
+        </div>
+        <div id="author"><br></br>
+            <hr /><h5> By: John Patrick Marie B. Dolor, Science Educator</h5>
+        </div>
+    </div>
+
+</main>
+
+<footer class="license">
+        <br /><hr><br>Project Tala Prototype Version 2023.<span id="prototype">000</span><br />
+        <div><a href="https://sourceforge.net/projects/project-tala/">Project TALA</a> is under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNL AGPL v3 License</a>. Made with ❤️ by Team Pivot, 2023 </div>
+</footer>
+<script>
+  const backButton = document.querySelector('#backButton');
+  backButton.addEventListener('click', () => {
+    history.back();
+  });
+// Get a reference to the div that will display the number
+const numberDisplay = document.getElementById('prototype');
+
+// Load the JSON file
+fetch('/data/prototype.json')
+  .then(response => response.json())
+  .then(data => {
+    // Update the number in the div with the value from the JSON file
+    numberDisplay.innerText = data.number;
+  });
+</script>
+
+</html

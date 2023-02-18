@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<html lang="en">
+<style>
+    body {
+        font-family: 'Montserrat', 'Chakra Petch', Arial, sans-serif;
+        font-size: 18px;
+        padding: 0 15% 0 15%;
+        background: #3B3B3B;
+        color: #FFFBEF;
+        text-align: center;
+    }
+    .navcontent a, .navcontent-r a {
+        padding: 20px 20px;
+    }
+    button {
+        border-color: #FFFBEF;
+        background: none;
+        color: #FFFBEF;
+        padding: 20px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-family: 'Chakra Petch', Arial, sans-serif;
+    }
+    button:hover {
+        background: #534439;
+    }
+    @media screen and (max-width:800px) {
+        body {
+            font-size: 16px;
+            padding: 0 10% 0 10%;
+        }
+        .navcontent a, .navcontent-r a {
+        padding: 30px 10px 30px 10px;
+        }
+    }
+    #nxt-button {
+        border-bottom: none;
+        float: right;
+    }
+    #backButton {
+        float: left;
+    }
+    .lesson-body {
+        text-align: left;
+    }
+</style>
+
+<head> <!--digdi ko na ikaag su navbar and anything not needed-->
+    <title>Math Fundamentals | Project TALA</title>
+</head>
+
+<header>
+    <ul class="navbar" name="navigation">
+        <li class="navcontent"><a href="/login/login.html">Login</a></li>
+        <li class="navcontent-r"><a href="/lessons/landing.html">Home</a></li>
+        <li class="navcontent"><a href="/index.html">Landing</a></li>
+    </ul>
+</header>
+
+<main>
+
+    <div class="lesson-content">
+        <div id="lesson-title">
+            <h2> Mathematics Fundamentals</h2> <hr />
+        </div>
+
+
+        <div class="lesson-body">
+            <p>
+                You don't quite get it? Well that's ok! New and relatively complex lessons may be hard for you to understand. <br>
+                The 4 basic operations in mathematics is  <br /><br />
+            </p>
+            <a href="lesson.html" id="nxt-button"><button>Next lesson</button></a>
+            <button id="backButton">Go back</button>
+        </div>
+        <br><br><br><br>
+
+        <div id="author">
+            <hr><h5>Made by Vincent Buenconsejo, Math Educator</h5>
+        </div>
+    </div>
+</main>
+
+<footer class="license">
+    <br /><hr><br>Project Tala Prototype Version 2023.<span id="prototype">000</span><br />
+    <div><a href="https://sourceforge.net/projects/project-tala/">Project TALA</a> is under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNL AGPL v3 License</a>. Made with ❤️ by Team Pivot, 2023 </div>
+</footer>
+<script>
+  const backButton = document.querySelector('#backButton');
+  backButton.addEventListener('click', () => {
+    history.back();
+  });
+// Get a reference to the div that will display the number
+const numberDisplay = document.getElementById('prototype');
+
+// Load the JSON file
+fetch('/data/prototype.json')
+  .then(response => response.json())
+  .then(data => {
+    // Update the number in the div with the value from the JSON file
+    numberDisplay.innerText = data.number;
+  });
+</script>
+</html>

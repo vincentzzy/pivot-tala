@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/styles/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<html lang="en">
+
+<style>
+    body {
+        font-family: 'Montserrat', 'Chakra Petch', Arial, sans-serif;
+        font-size: 18px;
+        padding: 0 15% 0 15%;
+        background: #3B3B3B;
+        color: #FFFBEF;
+        text-align: center;
+    }
+    .navcontent a, .navcontent-r a {
+        padding: 20px 20px;
+    }
+    button {
+        border-color: #FFFBEF;
+        background: none;
+        color: #FFFBEF;
+        padding: 20px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-family: 'Chakra Petch', Arial, sans-serif;
+    }
+    tr {
+        border-bottom: 2px solid #FFFBEF;
+    }
+    @media screen and (max-width:800px) {
+        body {
+            font-size: 16px;
+            padding: 0 10% 0 10%;
+        }
+        .navcontent a, .navcontent-r a {
+        padding: 30px 10px 30px 10px;
+        }
+    }
+</style>
+
+<head>
+<title>Changelog | Project TALA</title>
+<ul class="navbar" name="navigation">
+    <li class="navcontent"><a href="/login/login.html">Login</a></li>
+    <li class="navcontent-r"><a href="/lessons/landing.html">Home</a></li>
+    <li class="navcontent"><a href="/index.html">Landing</a></li>
+</ul>
+</head>
+<main>
+    <h2>Project TALA's Changelog</h2>
+    <table>
+        <th>
+            <tr>
+                <td>Version Number</td>
+                <td>Date Pushed</td>
+                <td>Changelog</td>
+            </tr>
+        </th>
+        <tbody>
+            <tr>
+                <td>2023.pre-alpha.01</td>
+                <td>February 15, 2023</td>
+                <td><ul>
+                    <li>Added Math & English Preface</li>
+                    <li>Added basic interface</li>
+                    <li>Added buttons</li>
+                </ul></td>
+            </tr>
+            <tr>
+                <td>2023.pre-alpha.02</td>
+                <td>February 16, 2023</td>
+                <td><ul>
+                    <li>Fixed landing page buttons</li>
+                    <li>Added Science Preface</li>
+                    <li>Fixed more small nuances</li>
+                </ul></td>
+            </tr>
+            <tr>
+                <td>2023.pre-alpha.03</td>
+                <td>TBA</td>
+                <td>Not yet finalized</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+<footer class="license">
+    <br />
+        <br /><hr><br>Project Tala Prototype Version 2023.<span id="prototype">000</span><br />
+        <div><a href="https://sourceforge.net/projects/project-tala/">Project TALA</a> is under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNL AGPL v3 License</a>. Made with ❤️ by Team Pivot, 2023 </div>
+</footer>
+<script>
+// Get a reference to the div that will display the number
+const numberDisplay = document.getElementById('prototype');
+
+// Load the JSON file
+fetch('/data/prototype.json')
+  .then(response => response.json())
+  .then(data => {
+    // Update the number in the div with the value from the JSON file
+    numberDisplay.innerText = data.number;
+  });
+</script>
+</html>

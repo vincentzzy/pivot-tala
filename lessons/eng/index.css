@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    background: #FFFBEF;
+    color: #3B3B3B;
+    padding: 25px;
+    font-family: 'Montserrat', 'Chakra Petch' Arial, sans-serif;
+    font-size: 20px;
+}
+li {
+    list-style-type: none;
+}
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+
+.navcontent {
+    float: right;
+}
+
+.navcontent-r {
+    float: left;
+}
+
+.navcontent a , .navcontent-r a {
+        display: block;
+        color: #3B3B3B;
+        text-align: left;
+        padding: 14px 16px;
+        text-decoration: none;
+        border-bottom: 0;
+ }
+
+a {
+    text-decoration: none;
+    border-bottom: 2px dotted;
+    color: #635e4e;
+}
+a:hover {
+        color: #4b4737;
+        text-decoration-line: none;
+
+}
+
+#license {
+  text-align: center;
+  padding: 16px 16px;
+}
+.acronym, .em, h1, h2, h4 {
+    font-weight: 700;
+}
+
+#lesson-title {
+    text-align: center;
+}
+
+.lesson-content {
+    padding: 0 20% 0 20%;
+}
+@media screen and (max-width: 800px){
+    .lesson-content {
+        padding: 0 5% 0 5%;
+    }
+}
+.lesson-content hr {
+    padding: 0 0 0 0;
+}

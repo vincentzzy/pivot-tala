@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/styles/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<html lang="en">
+
+<style>
+    body {
+        font-family: 'Montserrat', 'Chakra Petch', Arial, sans-serif;
+        font-size: 18px;
+        padding: 0 15% 0 15%;
+        background: #3B3B3B;
+        color: #FFFBEF;
+        text-align: center;
+    }
+    .navcontent a, .navcontent-r a {
+        padding: 20px 20px;
+    }
+    .catalogue a {
+        border-bottom: 0px;
+    }
+    button {
+        border-color: #FFFBEF;
+        background: none;
+        color: #FFFBEF;
+        padding: 20px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-family: 'Chakra Petch', Arial, sans-serif;
+    }
+    button:hover {
+        background: #534439;
+    }
+    .lessons {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        flex-basis: 50%;
+    }
+    @media screen and (max-width:800px) {
+        body {
+            font-size: 16px;
+            padding: 0 10% 0 10%;
+        }
+        .navcontent a, .navcontent-r a {
+        padding: 30px 10px 30px 10px;
+        }
+        .lessons {
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        padding: 10px;
+        }
+    }
+</style>
+
+<head>
+<title>Preferences | Project TALA</title>
+<ul class="navbar" name="navigation">
+    <li class="navcontent"><a href="/data/preferences.html">Preferences</a></li>
+    <li class="navcontent-r"><a href="#">Home</a></li>
+</ul>
+</head>
+<main>
+    <h1>Welcome to the Personalization Page!</h1><h3>This is where you personalize your learning style!</h3><span>We're currently looking ways on how we can automate this without violating your privacy or being an absolute creep so as of now, this is our solution :3</span>
+</main>
+<footer class="license">
+    <br />
+        <br /><hr><br>Project Tala Prototype Version 2023.<span id="prototype">000</span><br />
+        <div><a href="https://sourceforge.net/projects/project-tala/">Project TALA</a> is under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNL AGPL v3 License</a>. Made with ❤️ by Team Pivot, 2023 </div>
+</footer>
+<script>
+// Get a reference to the div that will display the number
+const numberDisplay = document.getElementById('prototype');
+
+// Load the JSON file
+fetch('/data/prototype.json')
+  .then(response => response.json())
+  .then(data => {
+    // Update the number in the div with the value from the JSON file
+    numberDisplay.innerText = data.number;
+  });
+</script>
+</html>
