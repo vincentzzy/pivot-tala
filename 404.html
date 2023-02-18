@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/styles/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Montserrat', 'Chakra Petch', Arial, sans-serif;
+        font-size: 18px;
+        padding: 0 15% 0 15%;
+        background: #3B3B3B;
+        color: #FFFBEF;
+        text-align: center;
+    }
+    .navcontent a, .navcontent-r a {
+        padding: 20px 20px;
+    }
+    @media screen and (max-width:800px) {
+        body {
+            font-size: 16px;
+            padding: 0 10% 0 10%;
+        }
+        .navcontent a, .navcontent-r a {
+        padding: 30px 10px 30px 10px;
+        }
+    }
+
+    .header h1{
+        padding: 30%;
+    }
+    img {
+  max-width: 80%;
+  height: auto;
+}
+</style>
+<title>404 | Project TALA</title>
+
+<ul class="navbar" name="navigation">
+    <li class="navcontent"><a href="/about_us.html">About Us</a></li>
+    <li class="navcontent-r"><a href="/lessons/landing.html">Home</a></li>
+    <li class="navcontent-r"><a href="#">Landing</a></li>
+</ul>
+
+<header>
+    <title>404 | Project TALA</title>
+    <h1>404 Resource Not Found</h1>
+</header>
+
+<body>
+    <div>
+        <img src="https://www.memecreator.com/static/images/memes/280042.jpg" style="width:90vw" />
+        <p>
+            Surprise! There's nothing here! Go back to the <a href="/index.html">Landing Site!</a>
+        </p>
+    </div>
+</body>
+
+<footer class="license">
+    <br /><hr><br>Project Tala Prototype Version 2023.<span id="prototype">000</span><br />
+    <div><a href="https://sourceforge.net/projects/project-tala/">Project TALA</a> is under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNL AGPL v3 License</a>. Made with ❤️ by Team Pivot, 2023 </div>
+</footer>
+<script>
+    const numberDisplay = document.getElementById('prototype');
+    
+    fetch('/data/prototype.json')
+      .then(response => response.json())
+      .then(data => {
+        numberDisplay.innerText = data.number;
+      });
+    </script>
+</html>

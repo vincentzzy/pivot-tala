@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/styles/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Montserrat', 'Chakra Petch', Arial, sans-serif;
+        font-size: 18px;
+        padding: 0 15%;
+    }
+
+    .team-stuff {
+        display: flex;
+        word-wrap: break-word;
+        flex-basis: 25%;
+        text-align: center;
+    }
+
+    .teamdesc {
+        text-align: center;
+        padding: 35px;
+        padding-top: inherit;
+    }
+
+    /*desktop view stuf*/
+    @media screen and (min-width:800px) {
+        .team {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .teampic {
+            width: 90%;
+        }
+    }
+
+    /*mobile view stuf*/
+    @media screen and (max-width:800px) {
+        .team-stuff {
+            flex-direction: column;
+        }
+
+        .teampic {
+            width: 90%;
+        }
+        body {
+            font-size: 16px;
+            padding: 0 10%;
+        }
+    }
+</style>
+
+<title>About Us | Team Pivot</title>
+
+<html lang="en">
+<ul class="navbar" name="navigation">
+    <li class="navcontent"><a href="#">About Us</a></li>
+    <li class="navcontent-r"><a href="/lessons/landing.html">Home</a></li>
+    <li class="navcontent-r"><a href="/index.html">Landing</a></li>
+</ul>
+
+<main>
+    <h1 style='text-align: center;'>About Team Pivot</h1>
+    <br><p class="teamdesc">
+        Hailing from Tabaco National High School, Team Pivot is a group of 4 STEM Students who don't know stuff about coding but decided to enter a competition because being alive is expensive and cash prizes are great.
+        <br /><br /> Jokes aside, Team Pivot is a group of dedicated procrastinators who have big ideas and the limited willpower to build it. We believe in the power of motivation, and we are more than motivated to change up the system we are in: education. Our name, Pivot, reflects our desire to be the people who will be the turning point in our journey to find the best (or worst) solution in our problems, whatever is easier.
+    </p>
+    <hr>
+    <h1 style='text-align: center;'>The Team</h1>
+
+    <div class="team-stuff">
+        <div class="team" id="vincent">
+            <p>
+                <img src="https://images2.imgbox.com/c2/81/cpfJIimC_o.png" class="teampic" />
+                <h4>Full-stack Developer, Math Educator, Team Leader</h4>
+                <a href="https://www.facebook.com/vincent.andahalf">Facebook</a><br />
+                <a href="https://twitter.com/vincentZZY">Twitter</a><br>
+                <a href="mailto:vincentbuenconsejo00@outlook.com">Email</a>
+            </p>
+        </div><br>
+        <div class="team" id="francis">
+            <p>
+                <img src="https://images2.imgbox.com/ec/6b/r2zddlpE_o.png" class="teampic" />
+                <h4>Front-end Developer, English Educator</h4>
+                <a href="https://www.facebook.com/francisglenn.paglinawan.5">Facebook</a> <br />
+                <a href="mailto:kuyatuday09@gmail.com">Email</a>
+            </p>
+        </div><br>
+        <div class="team" id="patrick">
+            <p>
+                <img src="https://images2.imgbox.com/1f/ec/ug9soMxD_o.png" class="teampic" />
+                <h4>Front-end Developer, Science Educator</h4>
+                <a href="https://www.facebook.com/jp.dolor.3">Facebook</a><br />
+                <a href="mailto:johnpatrick23dolor@gmail.com">Email</a>
+            </p>
+        </div><br>
+        <div class="team" id="raven">
+            <p>
+                <img src="https://images2.imgbox.com/b3/44/2mKgBE0d_o.png" class="teampic" />
+                <h4>English Educator</h4>
+                <a href="https://www.facebook.com/raven.cabadato.1">Facebook</a> <br />
+                <a href="mailto:ravencabadato200516@gmail.com">Email</a>
+            </p>
+        </div><br>
+    </div>
+</main>
+<footer class="license">
+    <br /><hr><br>Project Tala Prototype Version 2023.<span id="prototype">000</span><br />
+    <div><a href="https://sourceforge.net/projects/project-tala/">Project TALA</a> is under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNL AGPL v3 License</a>. Made with ❤️ by Team Pivot, 2023 </div>
+</footer>
+<script>
+    const numberDisplay = document.getElementById('prototype');
+    
+    fetch('/data/prototype.json')
+      .then(response => response.json())
+      .then(data => {
+        numberDisplay.innerText = data.number;
+      });
+    </script>
+</html>

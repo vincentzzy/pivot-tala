@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/styles/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<html lang="en">
+<style>
+    body {font-family: 'Montserrat', 'Chakra Petch', Arial, sans-serif;font-size: 18px;padding: 0 15% 0 15%;background: #3B3B3B;color: #FFFBEF;text-align: center;}
+    .navcontent a, .navcontent-r a {padding: 20px 20px;}
+    @media screen and (max-width:800px) {body {font-size: 16px;padding: 0 10% 0 10%;}.navcontent a, .navcontent-r a {padding: 30px 10px 30px 10px;}}
+    .header h1{padding: 30%;}
+</style>
+<head>
+    <ul class="navbar" name="navigation"><li class="navcontent"><a href="/about_us.html">About Us</a></li><li class="navcontent-r"><a href="/lessons/landing.html">Home</a></li><li class="navcontent-r"><a href="#">Landing</a></li></ul>
+    <title>Welcome | Project TALA</title>
+</head>
+
+<main>
+    <div id="header"><h1>Welcome to Project TALA!</h1><span>By Students. For Students.</span></div>
+    <body>
+        <br /><hr /><br>Project TALA is a student initiative to provide basic education to interested or struggling students or people without proper access to education.<br><br>
+            <span>Access the first prototype <a href="/lessons/landing.html">here!</a> And our changelog <a href="/data/changelog.html">here!</a></span>
+        <h3>Why Project TALA?</h3>
+        <h2>It's Free. Forever.</h2>
+            <span>Project TALA is an open-source free education platform designed by students to help other students in areas where assistance is greatly helpful.</span>
+        <h2>Anytime. Anywhere.</h2>
+            <span>Project TALA is designed to be light on your data and light on your time.</span>
+        <h2>Works With You!</h2><h6>hopefully :T</h6>
+            <span>Project TALA is designed to learn your preferences with a single survey and offer lessons based off of what we think might work best with your studying style. If you find any problems with this system, <a href="about_us.html#vincent">contact us!</a></span>
+            
+    </body>
+</main>
+
+<footer class="license">
+    <br /><hr><br>Project Tala Prototype Version 2023.<span id="prototype">000</span><br /><div><a href="https://sourceforge.net/projects/project-tala/">Project TALA</a> is under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNL AGPL v3 License</a>. Made with ❤️ by Team Pivot, 2023 </div>
+</footer>
+
+<script>
+const numberDisplay = document.getElementById('prototype');
+
+fetch('/data/prototype.json')
+  .then(response => response.json())
+  .then(data => {
+    numberDisplay.innerText = data.number;
+  });
+</script>
+</html>
